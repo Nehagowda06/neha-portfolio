@@ -13,9 +13,7 @@ export default async function BlogPost({
 
   const posts = getMarkdown("blog")
 
-  const post = posts.find(
-    (p: any) => p.slug === slug
-  )
+  const post: any = posts.find((p: any) => p.slug === slug)
 
   if (!post) return notFound()
 
