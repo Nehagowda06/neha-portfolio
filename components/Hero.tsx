@@ -53,10 +53,11 @@ export default function Hero() {
 
         <div className="bg-[#d9ddf6] p-10 rounded-3xl shadow-xl flex justify-center">
 
-          <img
-            src="/hero.svg"
-            className="max-w-xs"
-          />
+	 <img
+  	   src="/hero.svg"
+  	   alt="Developer illustration"
+  	   className="max-w-xs w-full"
+	 />
 
         </div>
 
