@@ -6,14 +6,14 @@ import rehypeHighlight from "rehype-highlight"
 export default async function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }) {
 
-  const { slug } = await params
+  const { slug } = params
 
   const posts = getMarkdown("blog")
 
-  const post: any = posts.find((p: any) => p.slug === slug)
+  const post = posts.find((p: any) => p.slug === slug)
 
   if (!post) return notFound()
 

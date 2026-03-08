@@ -3,7 +3,7 @@ title: "Quantum Reaction Pathways"
 description: "Scientific computing simulation of chemical reaction mechanisms"
 repo: "Nehagowda06/quantum-reaction-pathways"
 image: "/projects/quantum-reaction-pathways/cover.png"
-demo: "https://q-enzyme-quantum-reaction-pathways.streamlit.app/"
+demo: "https://quantum-reaction-pathways.streamlit.app"
 ---
 
 Quantum Reaction Pathways is a physics-driven computational tool for exploring catalytic reaction pathways using first-principles quantum dynamics.

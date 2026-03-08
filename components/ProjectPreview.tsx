@@ -8,13 +8,19 @@ export default function ProjectPreview({
   images: string[]
 }) {
 
-  const extended = [images[images.length - 1], ...images, images[0]]
+  if (!images || images.length === 0) return null
+
+  const extended = [
+    images[images.length - 1],
+    ...images,
+    images[0],
+  ]
 
   const [index, setIndex] = useState(1)
   const [animate, setAnimate] = useState(true)
   const [fullscreen, setFullscreen] = useState(false)
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   const startX = useRef(0)
   const endX = useRef(0)
@@ -62,15 +68,17 @@ export default function ProjectPreview({
 
     }
 
-    setTimeout(() => setAnimate(true), 750)
+    const timer = setTimeout(() => setAnimate(true), 750)
 
-  }, [index])
+    return () => clearTimeout(timer)
 
-  const handleTouchStart = (e: any) => {
+  }, [index, extended.length, images.length])
+
+  const handleTouchStart = (e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX
   }
 
-  const handleTouchMove = (e: any) => {
+  const handleTouchMove = (e: React.TouchEvent) => {
     endX.current = e.touches[0].clientX
   }
 
@@ -95,9 +103,8 @@ export default function ProjectPreview({
 
   }, [])
 
-  if (!images || images.length === 0) return null
-
-  const activeImage = images[(index - 1 + images.length) % images.length]
+  const activeImage =
+    images[(index - 1 + images.length) % images.length]
 
   return (
 
@@ -128,6 +135,7 @@ export default function ProjectPreview({
             <img
               key={i}
               src={img}
+              alt="Project preview"
               className="w-full flex-shrink-0 object-cover"
             />
 
@@ -144,7 +152,8 @@ export default function ProjectPreview({
             <div
               key={i}
               className={`w-2 h-2 rounded-full ${
-                i === (index - 1 + images.length) % images.length
+                i ===
+                (index - 1 + images.length) % images.length
                   ? "bg-white"
                   : "bg-white/40"
               }`}
@@ -156,7 +165,7 @@ export default function ProjectPreview({
 
       </div>
 
-      {/* FULLSCREEN VIEWER */}
+      {/* FULLSCREEN */}
 
       {fullscreen && (
 
@@ -167,6 +176,7 @@ export default function ProjectPreview({
 
           <img
             src={activeImage}
+            alt="Project preview fullscreen"
             className="max-h-[90vh] max-w-[95vw] object-contain"
           />
 
