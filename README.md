@@ -2,7 +2,7 @@
 
 A clean, modern developer portfolio built to showcase my work in backend systems, distributed architectures, and scientific computing.
 
-🔗 Live Site: https://nehagowda-portfolio.vercel.app/
+🔗 Live Site: https://nehagowda-portfolio.vercel.app
 
 ---
 
