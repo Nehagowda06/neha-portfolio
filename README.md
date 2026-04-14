@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nehagowda K S — Portfolio Website
 
-## Getting Started
+A clean, modern developer portfolio built to showcase my work in backend systems, distributed architectures, and scientific computing.
 
-First, run the development server:
+🔗 Live Site: https://nehagowda-portfolio.vercel.app/
+
+---
+
+## Overview
+
+This portfolio represents my work, technical interests, and ongoing projects as an Artificial Intelligence and Data Science undergraduate.
+
+The site is designed with a focus on:
+- clarity of information
+- minimal and professional UI
+- structured presentation of projects
+- scalability for future content (blogs, projects)
+
+---
+
+## Features
+
+- Clean and responsive UI
+- Structured project showcase
+- Dedicated About section
+- Blog section (extensible)
+- Smooth navigation with modern layout
+- Lightweight and fast-loading design
+
+---
+
+## Sections
+
+### Hero
+Clear introduction with technical focus:
+- Backend Engineering
+- Distributed Systems
+- Scientific Computing
+
+### Projects
+Highlighted work includes:
+- **Consent Ledger** — backend system for enterprise consent tracking  
+- **Quantum Reaction Pathways** — computational modeling project  
+- **RetryStorm (in progress)** — retry orchestration system for distributed systems  
+
+### About
+Brief overview on homepage with a detailed About page covering:
+- technical interests
+- project experience
+- leadership and achievements
+
+### Blog
+Planned space for writing about:
+- system design
+- backend architecture
+- APIs and distributed systems
+
+---
+
+## Tech Stack
+
+- **Frontend:** React / Next.js (depending on your actual stack)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+
+---
+
+## Design Principles
+
+- Minimal and distraction-free UI
+- Content-first approach
+- Clear technical positioning
+- Consistent spacing and typography
+- Responsive across devices
+
+---
+
+## Installation & Setup
+
+To run locally:
 
 ```bash
+git clone https://github.com/Nehagowda06/portfolio.git
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
